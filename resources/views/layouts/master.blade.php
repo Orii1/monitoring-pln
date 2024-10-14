@@ -36,14 +36,14 @@
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
 
-                        <li class="sidebar-item active ">
+                        <li class="sidebar-item {{ request()->routeIs('main.dashboard') ? 'active' : '' }} ">
                             <a href="{{Route('main.dashboard')}}" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item  has-sub">
+                        <li class="sidebar-item has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
                                 <span>Menu 1</span>
@@ -134,6 +134,62 @@
             </div>
         </div>
     </div>
+
+    {{-- LOADER --}}
+    {{-- <div id="loader-overlay" class="loader-overlay" style="display:none;"></div>
+    <div id="loader" class="card-loader" style="display:none;">
+        <div class="card-body text-center">
+            <div class="spinner-grow text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-secondary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-warning" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-info" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-dark" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div> --}}
+
+    {{-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+        // Function to show loader and overlay
+        function showLoader() {
+            document.getElementById('loader-overlay').style.display = 'block'; // Show transparent background
+            document.getElementById('loader').style.display = 'block'; // Show loader
+        }
+
+        // Function to hide loader and overlay
+        function hideLoader() {
+            document.getElementById('loader-overlay').style.display = 'none'; // Hide transparent background
+            document.getElementById('loader').style.display = 'none'; // Hide loader
+        }
+
+        // Example to simulate a process
+        document.getElementById('someAction').addEventListener('click', function() {
+            showLoader(); // Show loader saat proses dimulai
+
+            setTimeout(function() {
+                hideLoader(); // Hide loader setelah proses selesai (misalnya data selesai diambil)
+            }, 2000); // Simulasi proses selama 2 detik
+        });
+    </script> --}}
+
     <script src="{{asset('assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 
@@ -142,6 +198,7 @@
     <script src="{{asset('assets/js/pages/ui-apexchart.js')}}"></script>
     <script src="{{asset('assets/js/pages/dashboard.js')}}"></script>
     <script src="{{asset('assets/js/main.js')}}"></script>
+
 </body>
 
 </html>
