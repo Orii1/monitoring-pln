@@ -1057,9 +1057,8 @@
     position: relative
 }
 
-.sidebar-wrapper .menu .submenu .submenu-item.active>a {
-    color: #435ebe;
-    font-weight: 700
+.sidebar-wrapper .menu .submenu .submenu-item .active a {
+    background-color: #435ebe;
 }
 
 .sidebar-wrapper .menu .submenu .submenu-item a {

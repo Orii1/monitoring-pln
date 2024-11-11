@@ -48,8 +48,8 @@
                                 <i class="bi bi-stack"></i>
                                 <span>Menu 1</span>
                             </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
+                            <ul class="submenu">
+                                <li class="submenu-item">
                                     <a href="#">Sub Menu 1</a>
                                 </li>
                                 <li class="submenu-item ">
